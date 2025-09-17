@@ -1,7 +1,7 @@
 
 from typing import Dict
-from lca_algebraic import SymDict, ParamDef
-from lca_algebraic.base_utils import _method_unit
+from lca_algebraic import AxisDict, ParamDef
+from lca_algebraic.methods import method_unit
 from lca_algebraic.lca import _preMultiLCAAlgebric
 from lca_algebraic.params import _param_registry
 from lca_algebraic.stats import _round_expr
@@ -73,8 +73,8 @@ def export_lca(
         # Simplify
         for lambd, method_name  in zip(lambdas, methods_dict.keys()):
 
-            if isinstance(lambd.expr, SymDict):
-                lambd.expr = lambd.expr.dict
+            if isinstance(lambd.expr, AxisDict):
+                lambd.expr = lambd.expr._dict
             lambd.expr = round_expr(lambd.expr, num_digits=num_digits)
 
         # Save
@@ -92,7 +92,7 @@ def export_lca(
     # Build list of impacts
     impacts = {key: Impact(
         name = str(method),
-        unit = _method_unit(method)
+        unit = method_unit(method)
     ) for key, method in methods_dict.items()}
 
     return Model(

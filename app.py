@@ -8,6 +8,7 @@ from lib.settings import settings, OUTFILE
 import plotly.express as px
 from tornado.web import RequestHandler
 from lib.api import setup_api_handler
+from lib.utils import exception_context
 
 CSS_FILE = "static/style.css"
 
@@ -72,38 +73,39 @@ def display_params(model):
         with expander :
 
             for param in params:
+                with exception_context([param.name, param.default]):
 
-                param_label = param.name
-                if param.unit :
-                    param_label += " [%s]" % param.unit
+                    param_label = param.name
+                    if param.unit :
+                        param_label += " [%s]" % param.unit
 
-                if param.type == "bool" :
+                    if param.type == "bool" :
 
-                    param_values[param.name] = st.checkbox(
-                        key=param.name,
-                        label=param_label,
-                        help=param.label,
-                        value=param.default)
+                        param_values[param.name] = st.checkbox(
+                            key=param.name,
+                            label=param_label,
+                            help=param.label,
+                            value=float(param.default))
 
-                elif param.type == "enum" :
+                    elif param.type == "enum" :
 
-                    default_index = param.values.index(param.default) if param.default in param.values else None
+                        default_index = param.values.index(param.default) if param.default in param.values else None
 
-                    param_values[param.name] = st.selectbox(
-                        label=param_label,
-                        help=param.label,
-                        key=param.name,
-                        options=param.values,
-                        index=default_index)
+                        param_values[param.name] = st.selectbox(
+                            label=param_label,
+                            help=param.label,
+                            key=param.name,
+                            options=param.values,
+                            index=default_index)
 
-                else:
-                    param_values[param.name] = st.slider(
-                        key=param.name,
-                        label=param_label,
-                        help=param.label,
-                        min_value=float(param.min),
-                        max_value=float(param.max),
-                        value=param.default)
+                    else:
+                        param_values[param.name] = st.slider(
+                            key=param.name,
+                            label=param_label,
+                            help=param.label,
+                            min_value=float(param.min),
+                            max_value=float(param.max),
+                            value=float(param.default))
     return param_values
 
 

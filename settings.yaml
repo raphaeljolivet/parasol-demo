@@ -1,16 +1,16 @@
-title: Title of your project
+title: PARASOL
 icon: 🌬
-project: BrightwayProjectName
-database: ForegroundDatabaseName
-root_activity: "name of the root activity of the inventory"
+project: parasol-project
+database: parasol
+root_activity: "[parasol] Full PV system"
 
 # List of impacts to consider
 # This should refer key tuples of the impact categories.
 # You can pick their name (climate_change, etc) as you wish
 impacts:
-  climate_change: ['EF v3.0','climate change','global warming potential (GWP100)']
-  particules: ['EF v3.0','particulate matter formation','impact on human health']
-  mineral_depletion: ['EF v3.0','material resources: metals/minerals','abiotic depletion potential (ADP): elements (ultimate reserves)']
+  climate_change: ['EF v3.1', 'climate change', 'global warming potential (GWP100)']
+#  particules: ['EF v3.0','particulate matter formation','impact on human health']
+#  mineral_depletion: ['EF v3.0','material resources: metals/minerals','abiotic depletion potential (ADP): elements (ultimate reserves)']
 
 # List of function units to consider
 functional_units:
@@ -19,14 +19,14 @@ functional_units:
         unit: "-"
 
     installed_power: # The name of each functional unit is up to you
-        formula: installed_power_mw * 1000 # formula can refer to lca_algebraic parameters
+        formula: Power_plant_capacity # formula can refer to lca_algebraic parameters
         unit: "kW"
 
     energy: # The name of each functional unit is up to you
-        formula: installed_power_mw * 1000 * lifetime_year * 365 * 24 # formula can refer to lca_algebraic parameters
+        formula: Power_plant_capacity * Normalised_annual_PV_production_kWh_per_kWp * Power_plant_lifetime
         unit: "kWh"
 
 # List of axes to split impacts
 # Can be an empty list if no axis is defined in the project.
 # See : https://lca-algebraic.readthedocs.io/en/latest/notebooks/example-notebook.html#Split-impacts-along-axis
-axes: ["phase"]
+axes: []

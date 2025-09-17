@@ -8,13 +8,14 @@ sys.path.insert(0, os.getcwd())
 
 
 import lca_algebraic as agb
+import brightway2 as bw2
 from lib.export import export_lca
 from lib.settings import settings, OUTFILE
 
 
 def export():
 
-    agb.initProject(settings.project)
+    bw2.projects.set_current(settings.project)
     agb.loadParams()
 
     try:

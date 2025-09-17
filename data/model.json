@@ -1,0 +1,489 @@
+{
+    "params": {
+        "Electricity_mix_CO2_content": {
+            "name": "Electricity_mix_CO2_content",
+            "label": null,
+            "type": "float",
+            "default": 0.5,
+            "unit": "ratio or quasi-equivalent in kgCO2eq/kWh",
+            "group": "PV manufacture",
+            "description": null,
+            "min": 0,
+            "max": 1
+        },
+        "roof_vs_ground_ratio": {
+            "name": "roof_vs_ground_ratio",
+            "label": null,
+            "type": "float",
+            "default": 1.0,
+            "unit": "fraction",
+            "group": "PV install",
+            "description": "Proportion of rooftop installations",
+            "min": 0.0,
+            "max": 1.0
+        },
+        "Mounting_system_weight_total": {
+            "name": "Mounting_system_weight_total",
+            "label": null,
+            "type": "float",
+            "default": 5,
+            "unit": "kg/m\u00b2",
+            "group": "PV intall",
+            "description": null,
+            "min": 2,
+            "max": 11.5
+        },
+        "Mounting_system_weight_alu": {
+            "name": "Mounting_system_weight_alu",
+            "label": null,
+            "type": "float",
+            "default": 1.5,
+            "unit": "kg/m\u00b2",
+            "group": "PV install",
+            "description": null,
+            "min": 0.67,
+            "max": 2.4
+        },
+        "Mounting_system_weight_wood": {
+            "name": "Mounting_system_weight_wood",
+            "label": null,
+            "type": "float",
+            "default": 0,
+            "unit": "kg/m\u00b2",
+            "group": "PV install",
+            "description": null,
+            "min": 0,
+            "max": 10
+        },
+        "Ground_coverage_ratio": {
+            "name": "Ground_coverage_ratio",
+            "label": null,
+            "type": "float",
+            "default": 0.4,
+            "unit": "fraction",
+            "group": "PV install",
+            "description": "Ground coverage ratio",
+            "min": 0.2,
+            "max": 0.5
+        },
+        "Power_plant_lifetime": {
+            "name": "Power_plant_lifetime",
+            "label": null,
+            "type": "float",
+            "default": 30,
+            "unit": "year",
+            "group": "PV operation",
+            "description": "Lifetime of the PV plant",
+            "min": 20,
+            "max": 40
+        },
+        "Power_plant_capacity": {
+            "name": "Power_plant_capacity",
+            "label": null,
+            "type": "float",
+            "default": 100.0,
+            "unit": "kWp",
+            "group": "PV install",
+            "description": null,
+            "min": 3,
+            "max": 10000
+        },
+        "Recycling_rate": {
+            "name": "Recycling_rate",
+            "label": null,
+            "type": "float",
+            "default": 0.9,
+            "unit": "fraction",
+            "group": "PV recycle",
+            "description": null,
+            "min": 0,
+            "max": 1
+        },
+        "Silicon_production_electricity_intensity": {
+            "name": "Silicon_production_electricity_intensity",
+            "label": null,
+            "type": "float",
+            "default": 30,
+            "unit": "kWh/kg",
+            "group": "PV manufacture",
+            "description": null,
+            "min": 11,
+            "max": 180
+        },
+        "Silicon_production_heat_intensity": {
+            "name": "Silicon_production_heat_intensity",
+            "label": null,
+            "type": "float",
+            "default": 185,
+            "unit": "MJ/kg",
+            "group": "PV manufacture",
+            "description": null,
+            "min": 0,
+            "max": 185
+        },
+        "Silicon_casting_electricity_intensity": {
+            "name": "Silicon_casting_electricity_intensity",
+            "label": null,
+            "type": "float",
+            "default": 15,
+            "unit": "kWh/kg",
+            "group": "PV manufacture",
+            "description": null,
+            "min": 10,
+            "max": 30
+        },
+        "Diamond_wiring_cutting": {
+            "name": "Diamond_wiring_cutting",
+            "label": null,
+            "type": "bool",
+            "default": 1.0,
+            "unit": "",
+            "group": "PV manufacture",
+            "description": null,
+            "min": null,
+            "max": null
+        },
+        "Wafer_thickness": {
+            "name": "Wafer_thickness",
+            "label": null,
+            "type": "float",
+            "default": 160,
+            "unit": "\u00b5m",
+            "group": "PV manufacture",
+            "description": null,
+            "min": 128,
+            "max": 190
+        },
+        "Kerf_loss": {
+            "name": "Kerf_loss",
+            "label": null,
+            "type": "float",
+            "default": 0.3,
+            "unit": "fraction",
+            "group": "PV manufacture",
+            "description": null,
+            "min": 0.3,
+            "max": 0.5
+        },
+        "SiC_recycled_share": {
+            "name": "SiC_recycled_share",
+            "label": null,
+            "type": "float",
+            "default": 0.0,
+            "unit": "fraction",
+            "group": "PV install",
+            "description": null,
+            "min": 0.0,
+            "max": 0.9
+        },
+        "Manufacturing_efficiency_gains": {
+            "name": "Manufacturing_efficiency_gains",
+            "label": null,
+            "type": "float",
+            "default": 0,
+            "unit": "fraction",
+            "group": "PV manufacture",
+            "description": "Manufacturing efficiency gain (elec for wafer)",
+            "min": 0,
+            "max": 1
+        },
+        "Silver_content": {
+            "name": "Silver_content",
+            "label": null,
+            "type": "float",
+            "default": 9.6,
+            "unit": "g/m\u00b2",
+            "group": "PV manufacture",
+            "description": "Silver amount for PV cell",
+            "min": 2,
+            "max": 9.6
+        },
+        "Aluminium_frame_surfacic_weight": {
+            "name": "Aluminium_frame_surfacic_weight",
+            "label": null,
+            "type": "float",
+            "default": 1.5,
+            "unit": "kg/m2",
+            "group": "PV install",
+            "description": null,
+            "min": 0,
+            "max": 2.63
+        },
+        "Bifaciale_modules": {
+            "name": "Bifaciale_modules",
+            "label": null,
+            "type": "bool",
+            "default": 0.0,
+            "unit": "",
+            "group": "PV install",
+            "description": null,
+            "min": null,
+            "max": null
+        },
+        "Recycling_rate_Al": {
+            "name": "Recycling_rate_Al",
+            "label": null,
+            "type": "float",
+            "default": 0.96,
+            "unit": "fraction",
+            "group": "PV recycle",
+            "description": null,
+            "min": 0.56,
+            "max": 1
+        },
+        "Recycling_rate_Cu": {
+            "name": "Recycling_rate_Cu",
+            "label": null,
+            "type": "float",
+            "default": 0.75,
+            "unit": "fraction",
+            "group": "PV recycle",
+            "description": null,
+            "min": 0.44,
+            "max": 0.96
+        },
+        "Recycling_rate_glass": {
+            "name": "Recycling_rate_glass",
+            "label": null,
+            "type": "float",
+            "default": 0.9,
+            "unit": "fraction",
+            "group": "PV recycle",
+            "description": null,
+            "min": 0.6,
+            "max": 1
+        },
+        "Electricity_consumption_for_recycling": {
+            "name": "Electricity_consumption_for_recycling",
+            "label": null,
+            "type": "float",
+            "default": 50,
+            "unit": "kWh/t",
+            "group": "PV recycle",
+            "description": "elec used for recycling",
+            "min": 0,
+            "max": 250
+        },
+        "Heat_consumption_for_recycling": {
+            "name": "Heat_consumption_for_recycling",
+            "label": null,
+            "type": "float",
+            "default": 76,
+            "unit": "MJ/t",
+            "group": "PV recycle",
+            "description": "Heat for recycling",
+            "min": 0,
+            "max": 150
+        },
+        "Glass_thickness": {
+            "name": "Glass_thickness",
+            "label": null,
+            "type": "float",
+            "default": 4,
+            "unit": "mm",
+            "group": "PV install",
+            "description": null,
+            "min": 2,
+            "max": 4
+        },
+        "PV_module_efficiency": {
+            "name": "PV_module_efficiency",
+            "label": null,
+            "type": "float",
+            "default": 0.22,
+            "unit": "kWp/m\u00b2",
+            "group": "PV install",
+            "description": null,
+            "min": 0.15,
+            "max": 0.23
+        },
+        "Inverter_lifetime": {
+            "name": "Inverter_lifetime",
+            "label": null,
+            "type": "float",
+            "default": 15,
+            "unit": "year",
+            "group": "PV operation",
+            "description": null,
+            "min": 10,
+            "max": 30
+        },
+        "Inverter_weight_per_kW": {
+            "name": "Inverter_weight_per_kW",
+            "label": null,
+            "type": "float",
+            "default": 2.0,
+            "unit": "kg/kWp",
+            "group": "PV install",
+            "description": null,
+            "min": 1,
+            "max": 6
+        },
+        "Transport_distance_lorry": {
+            "name": "Transport_distance_lorry",
+            "label": null,
+            "type": "float",
+            "default": 1000.0,
+            "unit": "km",
+            "group": "PV transport",
+            "description": null,
+            "min": 40,
+            "max": 2000
+        },
+        "Transport_distance_train": {
+            "name": "Transport_distance_train",
+            "label": null,
+            "type": "float",
+            "default": 500.0,
+            "unit": "km",
+            "group": "PV transport",
+            "description": null,
+            "min": 100,
+            "max": 600
+        },
+        "Transport_distance_boat": {
+            "name": "Transport_distance_boat",
+            "label": null,
+            "type": "float",
+            "default": 5000.0,
+            "unit": "km",
+            "group": "PV transport",
+            "description": null,
+            "min": 2000,
+            "max": 6000
+        },
+        "Electrical_installation_specific_weight": {
+            "name": "Electrical_installation_specific_weight",
+            "label": null,
+            "type": "float",
+            "default": 3.0,
+            "unit": "kg/kW",
+            "group": "PV install",
+            "description": null,
+            "min": 2.15,
+            "max": 4.6
+        },
+        "Normalised_annual_PV_production_kWh_per_kWp": {
+            "name": "Normalised_annual_PV_production_kWh_per_kWp",
+            "label": null,
+            "type": "float",
+            "default": 1300,
+            "unit": "kWh/kWp/year",
+            "group": "PV operation",
+            "description": "Dur\u00e9e de vie",
+            "min": 900,
+            "max": 1700
+        },
+        "Manufacturing_electricity_mix": {
+            "name": "Manufacturing_electricity_mix",
+            "label": null,
+            "type": "enum",
+            "default": "World",
+            "unit": "",
+            "group": "PV manufacture",
+            "description": "Switch on electricty mix used for PV manufacture",
+            "values": [
+                "FR",
+                "EU",
+                "US",
+                "CN",
+                "World",
+                "PV",
+                "Nuclear",
+                "Coal"
+            ]
+        },
+        "Manufacturing_electricity_mix_CO2": {
+            "name": "Manufacturing_electricity_mix_CO2",
+            "label": null,
+            "type": "enum",
+            "default": null,
+            "unit": "",
+            "group": "PV manufacture",
+            "description": "Switch on electricty mix used for PV manufacture",
+            "values": [
+                "content"
+            ]
+        }
+    },
+    "expressions": {
+        "total": {
+            "climate_change": {
+                "params": [
+                    "Silver_content",
+                    "Mounting_system_weight_total",
+                    "roof_vs_ground_ratio",
+                    "Silicon_casting_electricity_intensity",
+                    "Electrical_installation_specific_weight",
+                    "Glass_thickness",
+                    "Recycling_rate_Cu",
+                    "SiC_recycled_share",
+                    "Manufacturing_electricity_mix_CO2",
+                    "Silicon_production_heat_intensity",
+                    "Inverter_lifetime",
+                    "Manufacturing_electricity_mix",
+                    "Mounting_system_weight_wood",
+                    "Electricity_mix_CO2_content",
+                    "Wafer_thickness",
+                    "Electricity_consumption_for_recycling",
+                    "Transport_distance_train",
+                    "Recycling_rate_glass",
+                    "Power_plant_lifetime",
+                    "Silicon_production_electricity_intensity",
+                    "Transport_distance_lorry",
+                    "Diamond_wiring_cutting",
+                    "Kerf_loss",
+                    "Recycling_rate_Al",
+                    "Aluminium_frame_surfacic_weight",
+                    "Heat_consumption_for_recycling",
+                    "Mounting_system_weight_alu",
+                    "Transport_distance_boat",
+                    "Inverter_weight_per_kW",
+                    "Power_plant_capacity",
+                    "Bifaciale_modules",
+                    "Recycling_rate",
+                    "PV_module_efficiency",
+                    "Manufacturing_efficiency_gains"
+                ],
+                "expr": "6.12*Electrical_installation_specific_weight*Power_plant_capacity + 1.34*Power_plant_capacity*(1.0 - roof_vs_ground_ratio) + 0.0102*Transport_distance_boat*(0.001*Electrical_installation_specific_weight*Power_plant_capacity + 0.0125*Power_plant_capacity/PV_module_efficiency + 0.001*Inverter_weight_per_kW*Power_plant_capacity*Power_plant_lifetime/Inverter_lifetime) + 0.148*Transport_distance_lorry*(0.001*Electrical_installation_specific_weight*Power_plant_capacity + 0.0125*Power_plant_capacity/PV_module_efficiency + 0.001*Inverter_weight_per_kW*Power_plant_capacity*Power_plant_lifetime/Inverter_lifetime) + 0.0401*Transport_distance_train*(0.001*Electrical_installation_specific_weight*Power_plant_capacity + 0.0125*Power_plant_capacity/PV_module_efficiency + 0.001*Inverter_weight_per_kW*Power_plant_capacity*Power_plant_lifetime/Inverter_lifetime) + 131.0 + 1.0*Power_plant_capacity*(12.4*Mounting_system_weight_alu + 2.32*Mounting_system_weight_total - 2.15*Mounting_system_weight_wood - 0.166*roof_vs_ground_ratio + 2.67)/PV_module_efficiency + 1.0*Power_plant_capacity*(-2.02*Bifaciale_modules - 2.42*Diamond_wiring_cutting - 0.0188*Aluminium_frame_surfacic_weight*Recycling_rate_Al + 7.59*Aluminium_frame_surfacic_weight + 0.0125*Electricity_consumption_for_recycling*(0.953*Manufacturing_electricity_mix_CN + Manufacturing_electricity_mix_CO2_content*(1.09*Electricity_mix_CO2_content + 0.00627) + 1.07*Manufacturing_electricity_mix_Coal + 0.338*Manufacturing_electricity_mix_EU + 0.0777*Manufacturing_electricity_mix_FR + 0.00628*Manufacturing_electricity_mix_Nuclear + 0.0828*Manufacturing_electricity_mix_PV + 0.471*Manufacturing_electricity_mix_US + 0.708*Manufacturing_electricity_mix_World) - 0.0278*Glass_thickness*Recycling_rate_glass*(Bifaciale_modules + 1.0) + 3.28*Glass_thickness*(Bifaciale_modules + 1.0) + 3.73e-5*Heat_consumption_for_recycling - 0.197*Manufacturing_efficiency_gains - 0.0187*Recycling_rate_Cu*(-0.000264*Silver_content - 0.177*Abs(0.000516*Silver_content - 0.000361) - 0.222*Abs(0.000779*Silver_content - 0.000545) + 0.335*Abs(0.000789*Silver_content + 0.529*Abs(0.000516*Silver_content - 0.000361) + 0.663*Abs(0.000779*Silver_content - 0.000545) - 0.0157) + 0.118) + 0.313*SiC_recycled_share*(2.03 - 2.03*Diamond_wiring_cutting) + 0.214*Silver_content + 0.0023*Wafer_thickness*(1.0*Silicon_casting_electricity_intensity*(0.953*Manufacturing_electricity_mix_CN + Manufacturing_electricity_mix_CO2_content*(1.09*Electricity_mix_CO2_content + 0.00627) + 1.07*Manufacturing_electricity_mix_Coal + 0.338*Manufacturing_electricity_mix_EU + 0.0777*Manufacturing_electricity_mix_FR + 0.00628*Manufacturing_electricity_mix_Nuclear + 0.0828*Manufacturing_electricity_mix_PV + 0.471*Manufacturing_electricity_mix_US + 0.708*Manufacturing_electricity_mix_World) + 1.0*Silicon_production_electricity_intensity*(0.953*Manufacturing_electricity_mix_CN + Manufacturing_electricity_mix_CO2_content*(1.09*Electricity_mix_CO2_content + 0.00627) + 1.07*Manufacturing_electricity_mix_Coal + 0.338*Manufacturing_electricity_mix_EU + 0.0777*Manufacturing_electricity_mix_FR + 0.00628*Manufacturing_electricity_mix_Nuclear + 0.0828*Manufacturing_electricity_mix_PV + 0.471*Manufacturing_electricity_mix_US + 0.708*Manufacturing_electricity_mix_World) + 0.0552*Silicon_production_heat_intensity + 11.9*Manufacturing_electricity_mix_CN + 12.4*Manufacturing_electricity_mix_CO2_content*(1.09*Electricity_mix_CO2_content + 0.00627) + 13.2*Manufacturing_electricity_mix_Coal + 4.21*Manufacturing_electricity_mix_EU + 0.966*Manufacturing_electricity_mix_FR + 0.078*Manufacturing_electricity_mix_Nuclear + 1.03*Manufacturing_electricity_mix_PV + 5.85*Manufacturing_electricity_mix_US + 8.8*Manufacturing_electricity_mix_World + 7.58)/(0.15*Diamond_wiring_cutting - Kerf_loss + 1) + 4.49*Manufacturing_electricity_mix_CN + 4.71*Manufacturing_electricity_mix_CO2_content*(1.09*Electricity_mix_CO2_content + 0.00627) + 5.02*Manufacturing_electricity_mix_Coal + 1.59*Manufacturing_electricity_mix_EU + 0.366*Manufacturing_electricity_mix_FR + 0.0296*Manufacturing_electricity_mix_Nuclear + 0.39*Manufacturing_electricity_mix_PV + 2.22*Manufacturing_electricity_mix_US + 3.33*Manufacturing_electricity_mix_World + 7.0*(1.0 - SiC_recycled_share)*(2.03 - 2.03*Diamond_wiring_cutting) + 0.988*(8 - 8*Manufacturing_efficiency_gains)*(0.953*Manufacturing_electricity_mix_CN + Manufacturing_electricity_mix_CO2_content*(1.09*Electricity_mix_CO2_content + 0.00627) + 1.07*Manufacturing_electricity_mix_Coal + 0.338*Manufacturing_electricity_mix_EU + 0.0777*Manufacturing_electricity_mix_FR + 0.00628*Manufacturing_electricity_mix_Nuclear + 0.0828*Manufacturing_electricity_mix_PV + 0.471*Manufacturing_electricity_mix_US + 0.708*Manufacturing_electricity_mix_World) + 0.932*(30.2 - 30.2*Manufacturing_efficiency_gains)*(0.953*Manufacturing_electricity_mix_CN + Manufacturing_electricity_mix_CO2_content*(1.09*Electricity_mix_CO2_content + 0.00627) + 1.07*Manufacturing_electricity_mix_Coal + 0.338*Manufacturing_electricity_mix_EU + 0.0777*Manufacturing_electricity_mix_FR + 0.00628*Manufacturing_electricity_mix_Nuclear + 0.0828*Manufacturing_electricity_mix_PV + 0.471*Manufacturing_electricity_mix_US + 0.708*Manufacturing_electricity_mix_World) + 145.0*Abs(0.000516*Silver_content - 0.000361) + 179.0*Abs(0.000779*Silver_content - 0.000545) + 31.0)/PV_module_efficiency + Inverter_weight_per_kW*Power_plant_capacity*Power_plant_lifetime*((4.89 - 0.00807*Recycling_rate)*Piecewise((0.00201*Power_plant_capacity - 0.00502, (Power_plant_capacity >= 2.5) & (Power_plant_capacity < 500.0)), (1.0 - 1.0e-30*Power_plant_capacity, Power_plant_capacity >= 500.0), (0, True)) + (12.5 - 0.0136*Recycling_rate)*Piecewise((1.0 - 0.4*Power_plant_capacity, Power_plant_capacity < 2.5), (1.01 - 0.00201*Power_plant_capacity, Power_plant_capacity < 500.0), (0, True)))/Inverter_lifetime + 0.201*Inverter_weight_per_kW*Power_plant_capacity*Power_plant_lifetime/Inverter_lifetime"
+            }
+        }
+    },
+    "functional_units": {
+        "gross_impact": {
+            "quantity": {
+                "params": [],
+                "expr": "1.00000000000000"
+            },
+            "unit": "-"
+        },
+        "installed_power": {
+            "quantity": {
+                "params": [
+                    "Power_plant_capacity"
+                ],
+                "expr": "Power_plant_capacity"
+            },
+            "unit": "kW"
+        },
+        "energy": {
+            "quantity": {
+                "params": [
+                    "Power_plant_capacity",
+                    "Normalised_annual_PV_production_kWh_per_kWp",
+                    "Power_plant_lifetime"
+                ],
+                "expr": "Normalised_annual_PV_production_kWh_per_kWp*Power_plant_capacity*Power_plant_lifetime"
+            },
+            "unit": "kWh"
+        }
+    },
+    "impacts": {
+        "climate_change": {
+            "name": [
+                "('EF v3.1', 'climate change', 'global warming potential (GWP100)')"
+            ],
+            "unit": "kg CO2-Eq"
+        }
+    }
+}
