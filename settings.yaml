@@ -1,4 +1,4 @@
-title: PARASOL
+title: PV system environemental impact
 icon: 🌬
 project: parasol-project
 database: parasol
@@ -29,4 +29,4 @@ functional_units:
 # List of axes to split impacts
 # Can be an empty list if no axis is defined in the project.
 # See : https://lca-algebraic.readthedocs.io/en/latest/notebooks/example-notebook.html#Split-impacts-along-axis
-axes: []
+axes: ["part"]

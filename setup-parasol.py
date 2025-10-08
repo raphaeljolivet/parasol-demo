@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import brightway2 as bw
 import lca_algebraic as agb
 from dotenv import load_dotenv
@@ -9,6 +10,11 @@ load_dotenv()
 
 bw.projects.set_current("parasol-project")
 
+MYDB = "parasol"
+agb.resetDb(MYDB)
+agb.resetParams(MYDB)
+agb.setForeground(MYDB)
+
 # Need to be imported set current project
 import parasol_lca
 
@@ -17,17 +23,12 @@ BIOSPHERE_NAME=f"ecoinvent-{ECOINVENT_VERSION}-biosphere"
 TECHNOSPHERE_NAME=f"ecoinvent-{ECOINVENT_VERSION}-cutoff"
 
 if TECHNOSPHERE_NAME in bw2io.databases:
-    print("Ecoinvent already improted")
+    print("Ecoinvent already imported")
 else:
     import_ecoinvent_release(
         ECOINVENT_VERSION, "cutoff",
         env["ECOINVENT_LOGIN"],
         env["ECOINVENT_PASSWORD"])
-
-MYDB = "parasol"
-agb.resetDb(MYDB)
-agb.resetParams(MYDB)
-agb.setForeground(MYDB)
 
 parasol_lca.create({
     "target_database": MYDB,

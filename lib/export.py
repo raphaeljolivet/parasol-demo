@@ -41,7 +41,7 @@ def export_lca(
         functional_units : Dict[str, Dict],
         methods_dict,
         axes=None,
-        num_digits=3):
+        num_digits=3) -> Model:
     """
     :param system: Root inventory
     :param functional_units : Dict of Dict{unit, quantity}
@@ -74,7 +74,7 @@ def export_lca(
         for lambd, method_name  in zip(lambdas, methods_dict.keys()):
 
             if isinstance(lambd.expr, AxisDict):
-                lambd.expr = lambd.expr._dict
+                lambd.expr = {str(key) : round_expr(expr,  num_digits=num_digits) for key, expr  in lambd.expr._dict.items()}
             lambd.expr = round_expr(lambd.expr, num_digits=num_digits)
 
         # Save

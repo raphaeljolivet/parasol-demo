@@ -150,6 +150,10 @@ def display_results(model, impact, functional_unit, param_values):
             if key in res:
                 del res[key]
 
+        # Remove empty axis
+        res = {k: v for k, v in res.items() if v > 0.0}
+
+
         # Prepare for plotly
         data = dict(
             key=list(res.keys()),
