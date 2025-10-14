@@ -8,21 +8,21 @@ root_activity: "[parasol] Full PV system"
 # This should refer key tuples of the impact categories.
 # You can pick their name (climate_change, etc) as you wish
 impacts:
-  climate_change: ['EF v3.1', 'climate change', 'global warming potential (GWP100)']
-#  particules: ['EF v3.0','particulate matter formation','impact on human health']
-#  mineral_depletion: ['EF v3.0','material resources: metals/minerals','abiotic depletion potential (ADP): elements (ultimate reserves)']
+ "Climate change": ['EF v3.1', 'climate change', 'global warming potential (GWP100)']
+ # particules: ['EF v3.0','particulate matter formation','impact on human health']
+ "Mineral depletion": ['EF v3.1','material resources: metals/minerals','abiotic depletion potential (ADP): elements (ultimate reserves)']
 
 # List of function units to consider
 functional_units:
-    gross_impact: # The name of each functional unit is up to you
+    "Total": # The name of each functional unit is up to you
         formula: 1
         unit: "-"
 
-    installed_power: # The name of each functional unit is up to you
+    "Installed power ": # The name of each functional unit is up to you
         formula: Power_plant_capacity # formula can refer to lca_algebraic parameters
-        unit: "kW"
+        unit: "kWp"
 
-    energy: # The name of each functional unit is up to you
+    "Total Energy ": # The name of each functional unit is up to you
         formula: Power_plant_capacity * Normalised_annual_PV_production_kWh_per_kWp * Power_plant_lifetime
         unit: "kWh"
 
