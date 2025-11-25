@@ -8,9 +8,8 @@ root_activity: "[parasol] Full PV system"
 # This should refer key tuples of the impact categories.
 # You can pick their name (climate_change, etc) as you wish
 impacts:
- "Climate change": ['EF v3.1', 'climate change', 'global warming potential (GWP100)']
- # particules: ['EF v3.0','particulate matter formation','impact on human health']
- "Mineral depletion": ['EF v3.1','material resources: metals/minerals','abiotic depletion potential (ADP): elements (ultimate reserves)']
+    "Climate change": ['EF v3.1', 'climate change', 'global warming potential (GWP100)']
+    "Mineral depletion": ['EF v3.1','material resources: metals/minerals','abiotic depletion potential (ADP): elements (ultimate reserves)']
 
 # List of function units to consider
 functional_units:
