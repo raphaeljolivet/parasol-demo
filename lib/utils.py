@@ -1,5 +1,6 @@
 from time import perf_counter
 from contextlib import contextmanager
+import streamlit as st
 
 
 class timer:

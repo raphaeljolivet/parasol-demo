@@ -17,11 +17,11 @@ functional_units:
         formula: 1
         unit: "-"
 
-    "Installed power ": # The name of each functional unit is up to you
+    "Installed power": # The name of each functional unit is up to you
         formula: Power_plant_capacity # formula can refer to lca_algebraic parameters
         unit: "kWp"
 
-    "Total Energy ": # The name of each functional unit is up to you
+    "Total Energy": # The name of each functional unit is up to you
         formula: Power_plant_capacity * Normalised_annual_PV_production_kWh_per_kWp * Power_plant_lifetime
         unit: "kWh"
 

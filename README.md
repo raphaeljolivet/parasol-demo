@@ -2,6 +2,8 @@
 
 This project automatically generates dynamic [Streamlit](https://streamlit.io/) web apps from [lca_algebraic](https://lca-algebraic.readthedocs.io/en/latest/) parametric inventories.  
 
+It also provides a REST API for computing impacts.
+
 Preview :
 
 ![preview of web app](./static/preview.png)
@@ -93,6 +95,48 @@ You need to check that the **license** of your background database allows you to
 Technically, the web app is not linked to **Brightway** or any database anymore. The necessary impacts have been calculated once 
 and integrated into algebraic formulas. Yet, some providers, like **ecoinvent** are very (unreasonably) restrictive about the 
 usage of their data.
+
+# REST API
+
+In additional to the web app, a REST api is also deployed on `/api/compute_impact`.
+
+It is only avalaible for self-hosted environment, not on the streamlit community server.
+
+The RESt API takes the folloiwng query parameters in input :
+* **method** : Impact method. One of those defined in `settings.yaml` 
+* **functional_unit** : Functional unit. One of those define in `settings.yaml`
+* **axis** : Optional axis. 'total' by default
+* **<param_name>** : Any other query param is interpreted as a parameter of the model (as defined in `data\model.yaml`) 
+
+**Example call**
+``` 
+http://localhost:8501/api/compute_impacts?method=Climate%20change&axis=part&functional_unit=Total%20Energy&Power_plant_lifetime=25
+```
+
+This REST API will compute **climate change impact**, per **kWh** (total energy), splitted by **parts** of the system. 
+The **lifetime** of the system is set to **25 years**. All other parameters keep their default values.
+
+**Result**
+
+The REST API return a *json* doctionnary, with the physical unit of the result and the values, splitted by `axis` (if any)
+```json
+{ 
+  "value": {
+      "_other_": 0.0, 
+      "mounting": 0.004573986013986014, 
+      "elec_system": 0.0016992324756164101, 
+      "transport": 0.000486564289044289, 
+      "module": 0.015597616456714248
+  }, 
+  "unit": "kg CO2-Eq/kWh"}
+```
+
+
+
+
+
+
+
 
 # Copyright and license
 

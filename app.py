@@ -7,8 +7,9 @@ from lib.app_utils import group_params, select_dict, NullContextManager
 from lib.settings import settings, OUTFILE
 import plotly.express as px
 from tornado.web import RequestHandler
-from lib.api import setup_api_handler
 from lib.utils import exception_context
+from lib.webapp.api import setup_api
+from lib.webapp.utils import load_model
 
 CSS_FILE = "static/style.css"
 
@@ -19,9 +20,7 @@ def init_app():
         page_icon=settings.icon)
     st.title(settings.title)
 
-    @st.cache_resource()
-    def load_model():
-        return Model.from_file(OUTFILE)
+
 
     # Load CSS within page
     with open(CSS_FILE, 'r') as f:
@@ -30,13 +29,7 @@ def init_app():
             f"<style>{css}</style>",
             unsafe_allow_html=True)
 
-    # Setup API
-    class HelloHandler(RequestHandler):
-        def get(self):
-            self.write({'message': 'hello world'})
-
-    setup_api_handler('/app/static/hello', HelloHandler)
-    setup_api_handler('/hello', HelloHandler)
+    setup_api()
 
     # Load model once
     return load_model()
